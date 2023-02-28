@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color-primary: #fff;
+  --text-color-secondary: #d9d9d9;
+  --text-color-terciary: #a7b2c3;
+  --background: #030304;
+  --notification: #00bc4f;
+  --card-background: #202025;
+  --line: #474747;
+}
+
+body {
+  color: var(--text-color-primary);
+  background: var(--background);
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  padding: 1.875rem 1.75rem;
+}
+
+nav {
+  padding: 1rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-size: 0.75rem;
+  background-color: var(--background);
+}
+ul {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+ul img {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 2rem;
+}
+
+li {
+  list-style: none;
+}
+li:hover{
+  border-bottom: 1px solid var(--notification);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+header {
+  display: flex;
+  background: rgb(18, 18, 18);
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(
+    45deg,
+    rgba(18, 18, 18, 1) 30%,
+    rgba(36, 121, 64, 0.5) 80%
+  );
+  padding: 1rem 7.25rem;
+  
+}
+
+header h1 {
+  font-size: 2.375rem;
+  font-weight: 600;
+  line-height: 2.1875rem;
+
+  background: #00ce2c;
+  background: linear-gradient(to right, #00ce2c 15%, #aedf23 57%, #a3dc00 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header span {
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.375rem;
+  min-width: 11.4375rem;
+  color: var(--text-color-secondary);
+}
+
+header .hero {
+  display: flex;
+  align-items: center;
+}
+
+header figure {
+  display: none;
+}
+
+/* update */
+.update{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.update p{
+  font-weight: 300;
+  font-size: 0.75rem;
+}
+
+.notification{
+  top: 0;
+  left: 0;
+  width: 0.6875rem;
+  height: 0.6875rem;
+  background-color: var(--notification);
+  border-radius: 50%;
+  animation: notification 2s infinite;
+}
+
+/* section stocks */
+section .stocks{
+  margin-top: 1.875rem 0;
+}
+
+section .stock-content{
+  display: grid;
+  gap: 1.25rem;
+}
+
+.cards{
+  display: flex;
+  background-color: var(--card-background);
+  border-radius: 0.3rem;
+  border: 0.38px solid var(--line);
+  padding: 0.625rem 0.75rem;
+  width: 100%;
+}
+.cards img{
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.cards .card-title{
+  font-size: 0.75rem;
+  color: var(--text-color-secondary);
+}
+.cards .card-value{
+  font-size: 0.75rem;
+  color: var(--text-color-terciary);
+}
+
+/* Animações */
+
+@keyframes notification {
+  0% {
+    box-shadow: 0 0 5px 2px var(--notification);
+  }
+
+  70% {
+    box-shadow: 0 0 3px 9px rgba(142, 102, 255, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 5px 2px var(--notification);
+  }
+}
