@@ -39,128 +39,162 @@
       </figure>
     </div>
   </header>
-
   <div class="container">
     <div class="update">
       <span class="notification"></span>
-      <p>última atualização as 23:59</p>
+
+      <p id="date-hour">atualizado em 23:90</p>
     </div>
 
-    <section class="quotes">
+    <section class="container-values stocks">
       <h3>Ações</h3>
       <div class="line"></div>
-      <div class="quotes-content">
+      <div class="content">
         <div class="cards">
-          <img src="./assets/stock-icon.svg" alt="Icon australian dollar">
+          <img src="./assets/stock-icon.svg" alt="bovespa" />
 
-          <div>
+          <div data-id="IBOVESPA">
             <span class="card-title">Índice Bovespa</span>
-            <span class="card-value">0.15%</span>
+            <span class="card-value" data-id="IBOVESPA">-</span>
           </div>
         </div>
 
-        <div class="cards">
-          <img src="./assets/stock-icon.svg" alt="Icon australian dollar">
+        <div class="cards" data-id="IFIX">
+          <img src="./assets/stock-icon.svg" alt="IFIX" />
 
           <div>
             <span class="card-title">IFIX</span>
-            <span class="card-value">0.15%</span>
+            <span class="card-value" data-id="IFIX">-</span>
+          </div>
+        </div>
+
+        <div class="cards" data-id="CAC">
+          <img src="./assets/stock-icon.svg" alt="cac" />
+
+          <div>
+            <span class="card-title">CAC</span>
+            <span class="card-value" data-id="CAC">-</span>
+          </div>
+        </div>
+
+        <div class="cards" data-id="DOWJONES">
+          <img src="./assets/stock-icon.svg" alt="DOWJONES" />
+
+          <div>
+            <span class="card-title">DOWJONES</span>
+            <span class="card-value" data-id="DOWJONES">-</span>
+          </div>
+        </div>
+
+        <div class="cards" data-id="NASDAQ">
+          <img src="./assets/stock-icon.svg" alt="NASDAQ" />
+
+          <div>
+            <span class="card-title">NASDAQ</span>
+            <span class="card-value" data-id="NASDAQ">-</span>
+          </div>
+        </div>
+
+        <div class="cards" data-id="NIKKEI">
+          <img src="./assets/stock-icon.svg" alt="NIKKEI" />
+
+          <div>
+            <span class="card-title">NIKKEI</span>
+            <span class="card-value" data-id="NIKKEI">-</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="quotes">
+    <section class="container-values quotes">
       <h3>Cotações</h3>
       <div class="line"></div>
-      <div class="quotes-content">
-        <div class="cards">
-          <img src="./assets/dollar-icon.svg" alt="dollar">
+      <div class="content">
+        <div class="cards" data-id="USD">
+          <img src="./assets/dollar-icon.svg" alt="Dólar" />
 
           <div>
             <span class="card-title">Dólar</span>
-            <span class="card-value">-</span>
+            <span class="card-value" data-id="USD">-</span>
           </div>
         </div>
 
-        <div class="cards">
+        <div class="cards" data-id="CAD">
           <img src="./assets/canadian-dollar-icon.svg" alt="Dólar Canadense" />
 
           <div>
             <span class="card-title">Dólar Canadense</span>
-            <span class="card-value">-</span>
+            <span class="card-value" data-id="CAD">-</span>
           </div>
         </div>
 
-        <div class="cards">
+        <div class="cards" data-id="AUD">
           <img src="./assets/australian-dollar-icon.svg" alt="Dólar Australiano" />
 
           <div>
             <span class="card-title">Dólar Australiano</span>
-            <span class="card-value">-</span>
+            <span class="card-value" data-id="AUD">-</span>
           </div>
         </div>
 
-        <div class="cards">
+        <div class="cards" data-id="EUR">
           <img src="./assets/euro-icon.svg" alt="Euro" />
 
           <div>
             <span class="card-title">Euro</span>
-            <span class="card-value">-</span>
+            <span class="card-value" data-id="EUR">-</span>
           </div>
         </div>
 
-        <div class="cards">
+        <div class="cards" data-id="GBP">
           <img src="./assets/libra-icon.svg" alt="Libra" />
 
           <div>
             <span class="card-title">Libra</span>
-            <span class="card-value">-</span>
+            <span class="card-value" data-id="GBP">-</span>
           </div>
         </div>
 
-        <div class="cards">
+        <div class="cards" data-id="ARS">
           <img src="./assets/peso-argentino.svg" alt="Peso Argentino" />
 
           <div>
             <span class="card-title">Peso Argentino</span>
-            <span class="card-value">-</span>
+            <span class="card-value" data-id="ARS">-</span>
           </div>
         </div>
 
-        <div class="cards">
+        <div class="cards" data-id="JPY">
           <img src="./assets/yen-icon.svg" alt="Yen" />
 
           <div>
             <span class="card-title">Yen</span>
-            <span class="card-value">-</span>
+            <span class="card-value" data-id="JPY">-</span>
           </div>
         </div>
 
-        <div class="cards">
+        <div class="cards" data-id="CNY">
           <img src="./assets/yuan-icon.svg" alt="Yuan" />
+
           <div>
             <span class="card-title">Yuan</span>
-            <span class="card-value">-</span>
+            <span class="card-value" data-id="CNY">-</span>
           </div>
         </div>
 
-        <div class="cards">
+        <div class="cards" data-id="BTC">
           <img src="./assets/bitcoin-icon.svg" alt="Bitcoin" />
+
           <div>
             <span class="card-title">Bitcoin</span>
-            <span class="card-value">-</span>
+            <span class="card-value" data-id="BTC">-</span>
           </div>
         </div>
       </div>
     </section>
-
-    <footer>
+<footer>
       <p><a href="https://portfolio-rauanel.netlify.app/">Rauane Lima</a> em live com <a href="https://birobirobiro.dev" target="_blank">birobirobiro.dev</a></p>
     </footer>
-
-  </div>
-
 </body>
 
 </html>

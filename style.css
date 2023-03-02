@@ -12,12 +12,13 @@
   --notification: #00bc4f;
   --card-background: #202025;
   --line: #474747;
+  --negative: #ff5555;
 }
 
 body {
-  color: var(--text-color-primary);
-  background: var(--background);
   font-family: "Poppins", sans-serif;
+  color: var(--text-color-primary);
+  background-color: var(--background);
   width: 100%;
   height: 100vh;
 }
@@ -26,20 +27,27 @@ body {
   padding: 1.875rem 1.75rem;
 }
 
+a {
+  text-decoration: none;
+  color: var(--text-color-primary);
+}
+
 nav {
-  padding: 1rem;
   display: flex;
   width: 100%;
   justify-content: center;
-  font-size: 0.75rem;
+  padding: 1rem;
   background-color: var(--background);
+  font-size: 0.875rem;
 }
+
 ul {
   display: flex;
-  gap: 1.25rem;
   align-items: center;
+  gap: 1.25rem;
 }
-ul img {
+
+nav ul img {
   width: 1rem;
   height: 1rem;
   margin-right: 2rem;
@@ -47,27 +55,24 @@ ul img {
 
 li {
   list-style: none;
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
 }
+
 li:hover {
   border-bottom: 1px solid var(--notification);
 }
 
-a {
-  text-decoration: none;
-  color: var(--text-color);
-}
-
 header {
   display: flex;
-  background: rgb(18, 18, 18);
   justify-content: center;
   text-align: center;
-  background: linear-gradient(
-    45deg,
-    rgba(18, 18, 18, 1) 30%,
-    rgba(36, 121, 64, 0.5) 80%
-  );
   padding: 1rem 7.25rem;
+
+  background: rgb(18, 18, 18);
+  background: linear-gradient(45deg,
+      rgba(18, 18, 18, 1) 30%,
+      rgba(36, 121, 64, 0.5) 80%);
 }
 
 header h1 {
@@ -99,17 +104,16 @@ header figure {
   display: none;
 }
 
-/* update */
 .update {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.625rem;
 }
 
 .update p {
+  font-size: 0.875rem;
   font-weight: 300;
-  font-size: 0.75rem;
 }
 
 .notification {
@@ -120,65 +124,88 @@ header figure {
   animation: notification 2s infinite;
 }
 
-/* section stocks */
-.quotes {
- margin: 2.5rem 0;
+.container-values {
+  margin: 2.5rem 0;
 }
 
-.quotes-content {
+section h3 {
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.line {
+  margin: 0.5rem 0;
+  width: 100%;
+  height: 0.0313rem;
+  background-color: var(--line);
+}
+
+.content {
   display: grid;
   gap: 1.25rem;
 }
 
-section h3 {
-  font-weight: 300;
-  font-size: 0.75rem;
-}
-.line {
-   background-color: var(--line);
-   margin: 0.5rem 0;
-   width: 100%;
-   height: 0.0313rem;
-}
 .cards {
   display: flex;
   background-color: var(--card-background);
-  border-radius: 0.3rem;
+  border-radius: 0.1875rem;
   border: 0.38px solid var(--line);
   padding: 0.625rem 0.75rem;
   width: 100%;
   gap: 0.625rem;
   align-items: center;
 }
+
 .cards div {
   display: flex;
   flex-direction: column;
 }
+
 .cards img {
   width: 1.875rem;
   height: 1.875rem;
 }
 
 .cards .card-title {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: var(--text-color-secondary);
 }
+
 .cards .card-value {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: var(--text-color-terciary);
 }
 
-/* footer */
-footer{
+.negative {
+  color: var(--negative) !important;
+}
+
+footer {
   display: flex;
-  justify-content: center;
-  align-items: center;
   font-weight: 300;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
+  justify-content: center;
 }
 
-footer a{
-  color: var(--text-color-terciary);
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--line);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--line);
+  border-radius: 10px;
 }
 
 /* Animações */
@@ -194,5 +221,111 @@ footer a{
 
   100% {
     box-shadow: 0 0 5px 2px var(--notification);
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 1.875rem 2.5rem;
+  }
+
+  nav {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+  }
+
+  header {
+    padding: 1rem 2.5rem;
+  }
+
+  header h1 {
+    font-size: 3.125rem;
+    line-height: 3.125rem;
+  }
+
+  header span {
+    font-size: 1rem;
+    line-height: 1.875rem;
+    min-width: 15.625rem;
+  }
+
+  header .hero {
+    display: flex;
+    align-items: center;
+  }
+
+  header figure {
+    display: block;
+    margin-left: 1.25rem;
+  }
+
+  header figure img {
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+
+  .update {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+  }
+
+  .update p {
+    font-size: 1rem;
+  }
+
+  .notification {
+    width: 0.6875rem;
+    height: 0.6875rem;
+    background-color: var(--notification);
+    border-radius: 50%;
+    animation: notification 2s infinite;
+  }
+
+  .container-values {
+    margin: 2.5rem 0;
+  }
+
+  section h3 {
+    font-size: 1.125rem;
+  }
+
+  .line {
+    margin: 0.5rem 0;
+    width: 100%;
+    height: 0.0313rem;
+    background-color: var(--line);
+  }
+
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .cards {
+    display: flex;
+    background-color: var(--card-background);
+    border-radius: 0.1875rem;
+    border: 0.38px solid var(--line);
+    padding: 0.625rem 0.75rem;
+    width: 100%;
+    gap: 0.625rem;
+    align-items: center;
+  }
+
+  .cards div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards .card-title,
+  .cards .card-value {
+    font-size: 1rem;
+  }
+
+  .cards img {
+    width: 3rem;
+    height: 3rem;
   }
 }
